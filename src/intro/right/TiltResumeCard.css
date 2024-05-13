@@ -1,0 +1,26 @@
+.tilt-resume-card-outer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.4rem;
+  background: rgb(255, 255, 255, 0.3);
+
+  transform-style: preserve-3d;
+}
+
+.tilt-resume-card-inner {
+  position: absolute;
+  border-radius: 0.4rem;
+  background-color: white;
+  opacity: 1;
+  inset: 1rem;
+  place-content: center;
+
+  transform: translateZ(75px);
+  transform-style: preserve-3d;
+}
+
+.text-resume {
+  text-align: center;
+  transform: translateZ(75px);
+}
