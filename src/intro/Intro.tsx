@@ -1,14 +1,33 @@
+import { useState } from "react";
 import "./Intro.css";
 
-import IntroLeftContainer from "./left/IntroLeftContainer";
-import RightContainer from "./right/IntroRightContainer";
+import { motion } from "framer-motion";
+import IntroLeftContainer from "./IntroLeftContainer";
+import RightContainer from "./IntroRightContainer";
+import TiltResumeCard from "./TiltResumeCard";
 
 function Intro() {
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
+
   return (
-    <div className="intro-canvas">
+    <motion.div className="intro-canvas">
       <IntroLeftContainer />
       <RightContainer />
-    </div>
+      {isResumeOpen ? (
+        <>
+          <div className="resume-center">
+            <TiltResumeCard isResumeOpen={isResumeOpen} />
+          </div>
+          <div className="mask" onClick={() => setIsResumeOpen(false)}></div>
+        </>
+      ) : (
+        <>
+          <div className="resume-side" onClick={() => setIsResumeOpen(true)}>
+            <TiltResumeCard isResumeOpen={isResumeOpen} />
+          </div>
+        </>
+      )}
+    </motion.div>
   );
 }
 

@@ -1,6 +1,47 @@
 .intro-canvas {
-  height: 100%;
-  width: 100%;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.resume-side {
+  height: 80vh;
+  width: 50vw;
+  max-width: 75rem;
+  z-index: 1;
+  position: absolute;
+  transform: translate(145%, 60%) rotate(-10deg);
+  transition: all 1s ease;
+  -webkit-transition: all 0.8s ease;
+}
+
+.resume-side:hover {
+  height: 85vh;
+  z-index: 1;
+  font-size: 3.5rem;
+  transform: translate(110%, 40%) rotate(-5deg);
+  transition: all 1s ease;
+  -webkit-transition: all 0.8s ease;
+}
+
+.resume-center {
+  height: 100vh;
+  width: 60vw;
+  z-index: 1;
+  position: absolute;
+  margin-left: 20vw;
+  transition: all 1s ease;
+  -webkit-transition: all 0.8s ease;
+}
+
+.mask {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.8);
 }

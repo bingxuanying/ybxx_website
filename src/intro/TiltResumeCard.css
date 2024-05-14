@@ -1,0 +1,79 @@
+.tilt-resume-card-outer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.2rem;
+  background: rgb(255, 255, 255, 0.3);
+
+  transform-style: preserve-3d;
+}
+
+.tilt-resume-card-inner {
+  position: absolute;
+  border-radius: 0.2rem;
+  background-color: white;
+  inset: 1rem;
+  place-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform: translateZ(75px);
+  transform-style: preserve-3d;
+}
+
+.resume-pdf-opened-frame {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+
+  /* hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.resume-pdf-opened-frame::-webkit-scrollbar {
+  display: none;
+}
+
+.resume-pdf-opened {
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.resume-pdf {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 0.2rem;
+  transform: translateZ(75px);
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+}
+
+.resume-pdf-hover {
+  opacity: 0.5;
+}
+
+.text-resume {
+  color: black;
+  font-size: 3rem;
+  font-weight: 700;
+  transform: translateZ(75px);
+}
+
+.text-resume-hover {
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+  background-color: black;
+  transform: translateZ(75px);
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+  opacity: 1;
+  transform: scale(0.95);
+}

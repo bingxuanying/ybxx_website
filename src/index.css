@@ -1,12 +1,15 @@
 body {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   color: white;
   background-color: black;
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: sans-serif, Arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 code {
