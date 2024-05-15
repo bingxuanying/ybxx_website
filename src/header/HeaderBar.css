@@ -15,16 +15,38 @@
   position: relative;
   width: 3rem;
   height: 3rem;
-  border: 0.1rem solid white;
+  border: 0.2rem solid white;
   border-radius: 100%;
+  font-size: 14px;
 }
 
 .header-icon-char {
   color: white;
-  font-weight: 00;
+  font-weight: 700;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 13px;
+}
+
+.header-icon:hover {
+  animation: header-icon-shake 0.8s ease-in forwards;
+}
+
+@keyframes header-icon-shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
